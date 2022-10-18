@@ -1,5 +1,7 @@
 @with_kw struct NNDynTrack <: Solver
-    optimizer = CPLEX.Optimizer
+    #optimizer = CPLEX.Optimizer
+    # cheng-hack:
+    optimizer = GLPK.Optimizer
 end
 
 function solve(solver::NNDynTrack, problem::TrackingProblem, start_values=nothing)

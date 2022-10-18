@@ -1,5 +1,7 @@
 @with_kw struct NNMPC <: Solver
-    optimizer = CPLEX.Optimizer
+    #optimizer = CPLEX.Optimizer
+    # cheng-hack:
+    optimizer = GLPK.Optimizer
 end
 
 function solve(solver::NNMPC, problem::MPCProblem, start_values=nothing)

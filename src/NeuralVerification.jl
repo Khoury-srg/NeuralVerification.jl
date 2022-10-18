@@ -2,7 +2,9 @@ module NeuralVerification
 
 using JuMP
 
-using GLPK, SCS, CPLEX # SCS only needed for Certify
+#using GLPK, SCS, CPLEX # SCS only needed for Certify
+# cheng-hack:
+using GLPK, SCS # SCS only needed for Certify
 using PicoSAT # needed for Planet
 using LazySets, LazySets.Approximations
 using Polyhedra, CDDLib
